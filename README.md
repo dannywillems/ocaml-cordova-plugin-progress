@@ -3,7 +3,7 @@
 **Currently only for iOS**
 
 Binding to
-[cordova-plugin-progress](https://github.com/leecrossley/cordova-progress)
+[cordova-plugin-progress](https://github.com/leecrossley/cordova-plugin-progress)
 
 [Example
 application](https://github.com/dannywillems/ocaml-cordova-plugin-progress-example).
@@ -35,7 +35,7 @@ binding to the *progress* javascript object. You must call it when the devicerea
 event is handled, eg
 
 ```OCaml
-let on_device_ready =
+let on_device_ready _ =
   let progress = Progress.progress () in
   (* Some code *)
 
