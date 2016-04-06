@@ -3,7 +3,7 @@
 **Currently only for iOS**
 
 Binding to
-[cordova-plugin-progress](https://github.com/leecrossley/cordova-progress)
+[cordova-plugin-progress](https://github.com/leecrossley/cordova-plugin-progress)
 
 [Example
 application](https://github.com/dannywillems/ocaml-cordova-plugin-progress-example).
