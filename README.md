@@ -19,6 +19,28 @@ Cordova / PhoneGap Plugin for Progress HUD Notifications via KVNProgress.
 
 Source: [cordova-plugin-progress](https://github.com/leecrossley/cordova-progress)
 
+## How to install and compile your project by using this plugin ?
+
+Don't forget to switch to a compiler **>= 4.03.0**.
+```Shell
+opam switch 4.03.0+beta1
+```
+
+You can use opam by pinning the repository with
+```Shell
+opam pin add cordova-plugin-progress https://github.com/dannywillems/ocaml-cordova-plugin-progress.git
+```
+
+and to compile your project, use
+```Shell
+ocamlfind ocamlc -c -o [output_file] -package gen_js_api -package cordova-plugin-progress [...] -linkpkg [other arguments]
+```
+
+Don't forget to install the cordova plugin progress with
+```Shell
+cordova plugin add cordova-plugin-progress
+```
+
 ## How to use ?
 
 * See the [official documentation](https://github.com/leecrossley/cordova-progress)
@@ -32,13 +54,13 @@ We don't provide a *progress* variable in this plugin (as said in the official
 documentation on js_of_ocaml). If we did, *progress* will be set to **undefined**
 because the *progress* object doesn't exist when we create the variable.
 
-Instead, we provide a function *progress* of type *unit -> progress Js.t* which creates the
+Instead, we provide a function *Cordova_progress.t* of type *unit -> Cordova_progress* which creates the
 binding to the *progress* javascript object. You must call it when the deviceready
 event is handled, eg
 
 ```OCaml
 let on_device_ready =
-  let progress = Progress.progress () in
+  let progress = Cordova_progress.t () in
   (* Some code *)
 
 let _ =
