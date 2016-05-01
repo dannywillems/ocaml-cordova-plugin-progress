@@ -8,10 +8,6 @@
 Binding to
 [cordova-plugin-progress](https://github.com/leecrossley/cordova-plugin-progress)
 
-[Example
-application](https://github.com/dannywillems/ocaml-cordova-plugin-progress-example).
-**Not developed**
-
 ## What does cordova-plugin-progress do ?
 
 ```
